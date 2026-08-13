@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#FFFFFF">
+
+<title>موجا | Mowja - خصوصية صوتية تصون الماء</title>
+<meta name="description" content="موجا جهاز ذكي لدورات المياه يجمع الخصوصية الصوتية وترشيد استهلاك الماء. مشروع سعودي، قريباً. Mowja is a Saudi smart restroom device combining acoustic privacy with water conservation.">
+<link rel="canonical" href="https://mowja.co/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="موجا | Mowja">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://mowja.co/">
+<meta property="og:title" content="موجا | Mowja - خصوصية صوتية تصون الماء">
+<meta property="og:description" content="جهاز ذكي لدورات المياه يجمع الخصوصية الصوتية وترشيد الماء. مشروع سعودي، قريباً. A Saudi venture. A smart restroom device: acoustic privacy that saves water. Coming soon.">
+<meta property="og:image" content="https://mowja.co/og.png">
+<meta property="og:image:secure_url" content="https://mowja.co/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="موجا · Mowja">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="موجا | Mowja - خصوصية صوتية تصون الماء">
+<meta name="twitter:description" content="جهاز ذكي لدورات المياه يجمع الخصوصية الصوتية وترشيد الماء. مشروع سعودي، قريباً.">
+<meta name="twitter:image" content="https://mowja.co/og.png">
+<meta name="twitter:image:alt" content="موجا · Mowja">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="robots" content="index,follow">
+
+<link rel="preload" href="/assets/plex-ar-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/manrope-650.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+@font-face{font-family:'MowjaAR';src:url('/assets/plex-ar-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'MowjaEN';src:url('/assets/manrope-650.woff2') format('woff2');font-weight:650;font-style:normal;font-display:swap}
+
+:root{
+  --graphite:#242424;
+  --g700:#5E5E5E;
+  --g600:#707070;
+  --g500:#8A8A8A;
+  --g200:#E2E2E2;
+  --porcelain:#F5F5F5;
+  --paper:#FAFAFA;
+  --white:#FFFFFF;
+  --ar:'MowjaAR','IBM Plex Sans Arabic',Tahoma,sans-serif;
+  --en:'MowjaEN','Manrope',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  background:linear-gradient(180deg,var(--white) 0%,var(--paper) 62%,var(--porcelain) 100%);
+  color:var(--graphite);
+  font-family:var(--ar);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.en{font-family:var(--en);direction:ltr;unicode-bidi:isolate}
+a{color:inherit}
+
+main{
+  flex:1;
+  display:grid;
+  place-items:center;
+  padding:clamp(40px,9vh,90px) 24px clamp(30px,6vh,60px);
+  text-align:center;
+}
+.inner{width:min(660px,100%);display:flex;flex-direction:column;align-items:center}
+
+.logo{
+  width:min(340px,74vw);
+  margin-bottom:clamp(34px,6vh,54px);
+  opacity:0;
+  transform:translateY(9px);
+  animation:rise .9s cubic-bezier(.22,.7,.28,1) .1s forwards;
+}
+.logo img{display:block;width:100%;height:auto}
+
+.rule{
+  width:44px;height:1px;background:var(--g200);
+  margin-bottom:clamp(26px,4vh,36px);
+  opacity:0;animation:fade .9s ease .5s forwards;
+}
+
+h1{
+  font-size:clamp(21px,4.4vw,31px);
+  font-weight:500;
+  line-height:1.5;
+  letter-spacing:-.015em;
+  opacity:0;transform:translateY(9px);
+  animation:rise .9s cubic-bezier(.22,.7,.28,1) .32s forwards;
+}
+p.en-line{
+  margin-top:12px;
+  color:var(--g600);
+  font-family:var(--en);
+  font-size:clamp(13px,2.5vw,16px);
+  font-weight:650;
+  letter-spacing:-.02em;
+  direction:ltr;
+  unicode-bidi:isolate;
+  opacity:0;transform:translateY(9px);
+  animation:rise .9s cubic-bezier(.22,.7,.28,1) .44s forwards;
+}
+
+p.lede{
+  max-width:520px;
+  margin-top:clamp(20px,3.4vh,28px);
+  color:var(--g700);
+  font-size:clamp(14px,2.9vw,16px);
+  opacity:0;transform:translateY(9px);
+  animation:rise .9s cubic-bezier(.22,.7,.28,1) .56s forwards;
+}
+p.lede-en{
+  max-width:520px;
+  margin-top:10px;
+  color:var(--g700);
+  font-family:var(--en);
+  font-size:clamp(12.5px,2.5vw,14px);
+  font-weight:650;
+  line-height:1.7;
+  letter-spacing:-.012em;
+  direction:ltr;
+  unicode-bidi:isolate;
+  opacity:0;transform:translateY(9px);
+  animation:rise .9s cubic-bezier(.22,.7,.28,1) .66s forwards;
+}
+
+.status{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  margin-top:clamp(30px,5vh,42px);
+  padding:9px 18px;
+  border:1px solid var(--g200);
+  border-radius:999px;
+  background:var(--white);
+  font-size:12.5px;
+  color:var(--g700);
+  opacity:0;transform:translateY(9px);
+  animation:rise .9s cubic-bezier(.22,.7,.28,1) .78s forwards;
+}
+.status .pip{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--g500);
+  animation:pulse 2.8s ease-in-out infinite;
+}
+.status .sep{color:var(--g200)}
+.status .lat{font-family:var(--en);direction:ltr;unicode-bidi:isolate;font-weight:650;font-size:11.5px;letter-spacing:.04em}
+
+.brand-link{
+  display:inline-block;
+  margin-top:clamp(18px,3vh,26px);
+  font-size:12.5px;
+  color:var(--g600);
+  text-decoration:none;
+  border-bottom:1px solid var(--g200);
+  padding-bottom:2px;
+  transition:color .2s ease,border-color .2s ease;
+  opacity:0;transform:translateY(9px);
+  animation:rise .9s cubic-bezier(.22,.7,.28,1) .88s forwards;
+}
+.brand-link .en{font-size:11px;font-weight:650;letter-spacing:.02em;color:inherit}
+.brand-link:hover,.brand-link:focus-visible{color:var(--graphite);border-bottom-color:var(--g500)}
+
+footer{
+  padding:0 24px clamp(24px,4vh,40px);
+  text-align:center;
+  opacity:0;animation:fade 1s ease .95s forwards;
+}
+.contact{
+  display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;
+  margin-bottom:16px;
+}
+.contact a{
+  font-family:var(--en);direction:ltr;unicode-bidi:isolate;
+  font-size:12.5px;font-weight:650;color:var(--g700);
+  text-decoration:none;padding:4px 2px;
+  border-bottom:1px solid transparent;
+  transition:color .2s ease,border-color .2s ease;
+}
+.contact a:hover,.contact a:focus-visible{color:var(--graphite);border-bottom-color:var(--g200)}
+.credit{
+  font-family:var(--en);direction:ltr;unicode-bidi:isolate;
+  font-size:11px;font-weight:650;letter-spacing:.12em;
+  color:var(--g700);text-transform:uppercase;line-height:1.9;
+}
+.credit a{color:var(--g700);text-decoration:none;border-bottom:1px solid var(--g200)}
+.credit a:hover,.credit a:focus-visible{color:var(--graphite)}
+
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+@keyframes fade{to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.32}}
+
+@media (prefers-reduced-motion:reduce){
+  .logo,h1,.en-line,p.lede,p.lede-en,.status,.rule,.brand-link,footer{animation:none;opacity:1;transform:none}
+  .status .pip{animation:none}
+}
+@media (max-width:400px){
+  .contact{gap:6px 14px}
+}
+@media print{
+  body{background:#fff}
+  .logo,h1,p.en-line,p.lede,p.lede-en,.status,.rule,.brand-link,footer{animation:none;opacity:1;transform:none}
+  .status .pip{animation:none}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"موجا",
+  "alternateName":"Mowja",
+  "url":"https://mowja.co/",
+  "logo":"https://mowja.co/assets/logo.svg",
+  "description":"جهاز ذكي لدورات المياه يجمع الخصوصية الصوتية وترشيد استهلاك الماء.",
+  "address":{"@type":"PostalAddress","addressCountry":"SA"}
+}
+</script>
+</head>
+<body>
+
+<main>
+  <div class="inner">
+    <div class="logo">
+      <img src="/assets/logo.svg" width="651" height="320" alt="موجا · Mowja" fetchpriority="high">
+    </div>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <h1>خصوصية صوتية تصون الماء</h1>
+    <p class="en-line" lang="en" dir="ltr">Acoustic privacy that saves water</p>
+
+    <p class="lede">جهاز ذكي لدورات المياه يمنحك خصوصيتك، ويوقف الماء المهدر في سبيلها. مشروع سعودي. قريباً.</p>
+    <p class="lede-en" lang="en" dir="ltr">A smart restroom device that gives you privacy without running the tap to get it. A Saudi venture, coming soon.</p>
+
+    <div class="status">
+      <span class="pip" aria-hidden="true"></span>
+      <span>قريباً</span>
+      <span class="sep" aria-hidden="true">·</span>
+      <span class="lat" lang="en" dir="ltr">COMING SOON</span>
+    </div>
+
+    <a class="brand-link" href="/brand/">دليل الهوية البصرية <span class="en" lang="en" dir="ltr">— Mowja Brand Guidelines</span></a>
+  </div>
+</main>
+
+<footer>
+  <div class="contact" lang="en" dir="ltr">
+    <a href="mailto:hello@mowja.co">hello@mowja.co</a>
+    <a href="https://wa.me/966535558889" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+  <div class="credit" lang="en" dir="ltr">
+    BRAND IDENTITY CRAFTED BY <a href="https://promoe.com.sa" target="_blank" rel="noopener">PROMOTION EFFICIENCY</a>
+    · POWERED BY <a href="https://6degrees.com.sa" target="_blank" rel="noopener">6 DEGREES TECHNOLOGIES</a>
+  </div>
+</footer>
+
+</body>
+</html>
